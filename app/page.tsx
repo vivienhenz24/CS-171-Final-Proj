@@ -4,7 +4,6 @@
 
 import PixelBlast from '@/components/PixelBlast';
 import TopBar from '@/components/TopBar';
-import DepartmentEnrollment from '@/components/DepartmentEnrollment';
 
 export default function Home() {
   return (
@@ -54,7 +53,7 @@ export default function Home() {
         </div>
       </section>
       <div className="mt-32 mb-8">
-        <DepartmentEnrollment />
+
       </div>
     </main>
   );
