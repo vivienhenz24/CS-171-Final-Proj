@@ -1,0 +1,56 @@
+[
+  {
+    "semester": "2022Fall",
+    "year": 2022,
+    "term": "Fall",
+    "avg_rating": 4.39,
+    "avg_hours": 5.98,
+    "avg_enrollment": 32.0,
+    "num_courses": 996
+  },
+  {
+    "semester": "2023Spring",
+    "year": 2023,
+    "term": "Spring",
+    "avg_rating": 4.42,
+    "avg_hours": 5.93,
+    "avg_enrollment": 30.0,
+    "num_courses": 995
+  },
+  {
+    "semester": "2023Fall",
+    "year": 2023,
+    "term": "Fall",
+    "avg_rating": 4.39,
+    "avg_hours": 5.81,
+    "avg_enrollment": 31.0,
+    "num_courses": 1022
+  },
+  {
+    "semester": "2024Spring",
+    "year": 2024,
+    "term": "Spring",
+    "avg_rating": 4.41,
+    "avg_hours": 5.75,
+    "avg_enrollment": 29.0,
+    "num_courses": 998
+  },
+  {
+    "semester": "2024Fall",
+    "year": 2024,
+    "term": "Fall",
+    "avg_rating": 4.43,
+    "avg_hours": 6.45,
+    "avg_enrollment": 31.0,
+    "num_courses": 1018
+  },
+  {
+    "semester": "2025Spring",
+    "year": 2025,
+    "term": "Spring",
+    "avg_rating": 4.45,
+    "avg_hours": 6.32,
+    "avg_enrollment": 30.0,
+    "num_courses": 991
+  }
+]

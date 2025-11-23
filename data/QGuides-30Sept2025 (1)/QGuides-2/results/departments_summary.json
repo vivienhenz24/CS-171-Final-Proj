@@ -1,0 +1,906 @@
+[
+  {
+    "department": "ARMENST",
+    "num_courses": 4,
+    "avg_rating": 5.0,
+    "avg_hours": 4.48,
+    "avg_enrollment": 10.0,
+    "total_enrollment": 38
+  },
+  {
+    "department": "MODGRK",
+    "num_courses": 4,
+    "avg_rating": 4.95,
+    "avg_hours": 2.35,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 34
+  },
+  {
+    "department": "VIETNAM",
+    "num_courses": 6,
+    "avg_rating": 4.93,
+    "avg_hours": 4.45,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 65
+  },
+  {
+    "department": "WSTAFRCN",
+    "num_courses": 3,
+    "avg_rating": 4.93,
+    "avg_hours": 2.91,
+    "avg_enrollment": 13.0,
+    "total_enrollment": 40
+  },
+  {
+    "department": "FT",
+    "num_courses": 3,
+    "avg_rating": 4.9,
+    "avg_hours": 4.7,
+    "avg_enrollment": 10.0,
+    "total_enrollment": 29
+  },
+  {
+    "department": "JAPNLIT",
+    "num_courses": 6,
+    "avg_rating": 4.89,
+    "avg_hours": 6.25,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 73
+  },
+  {
+    "department": "SWEDISH",
+    "num_courses": 3,
+    "avg_rating": 4.88,
+    "avg_hours": 4.89,
+    "avg_enrollment": 6.0,
+    "total_enrollment": 19
+  },
+  {
+    "department": "TURKISH",
+    "num_courses": 3,
+    "avg_rating": 4.86,
+    "avg_hours": 8.43,
+    "avg_enrollment": 7.0,
+    "total_enrollment": 20
+  },
+  {
+    "department": "ISLAMCIV",
+    "num_courses": 10,
+    "avg_rating": 4.84,
+    "avg_hours": 6.27,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 124
+  },
+  {
+    "department": "JAPAN",
+    "num_courses": 12,
+    "avg_rating": 4.82,
+    "avg_hours": 7.54,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 102
+  },
+  {
+    "department": "RSRA",
+    "num_courses": 4,
+    "avg_rating": 4.79,
+    "avg_hours": 4.62,
+    "avg_enrollment": 9.0,
+    "total_enrollment": 36
+  },
+  {
+    "department": "SANSKRIT",
+    "num_courses": 5,
+    "avg_rating": 4.79,
+    "avg_hours": 8.47,
+    "avg_enrollment": 7.0,
+    "total_enrollment": 34
+  },
+  {
+    "department": "CHNSE",
+    "num_courses": 24,
+    "avg_rating": 4.78,
+    "avg_hours": 6.68,
+    "avg_enrollment": 10.0,
+    "total_enrollment": 242
+  },
+  {
+    "department": "HIND-URD",
+    "num_courses": 6,
+    "avg_rating": 4.78,
+    "avg_hours": 5.0,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 70
+  },
+  {
+    "department": "CLASPHIL",
+    "num_courses": 5,
+    "avg_rating": 4.77,
+    "avg_hours": 6.84,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 62
+  },
+  {
+    "department": "PORTUG",
+    "num_courses": 9,
+    "avg_rating": 4.76,
+    "avg_hours": 4.05,
+    "avg_enrollment": 7.0,
+    "total_enrollment": 63
+  },
+  {
+    "department": "GHHP",
+    "num_courses": 5,
+    "avg_rating": 4.76,
+    "avg_hours": 3.46,
+    "avg_enrollment": 24.0,
+    "total_enrollment": 120
+  },
+  {
+    "department": "CPB",
+    "num_courses": 3,
+    "avg_rating": 4.76,
+    "avg_hours": 16.01,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 24
+  },
+  {
+    "department": "ITAL",
+    "num_courses": 12,
+    "avg_rating": 4.72,
+    "avg_hours": 6.78,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 145
+  },
+  {
+    "department": "EAFM",
+    "num_courses": 8,
+    "avg_rating": 4.71,
+    "avg_hours": 5.71,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 116
+  },
+  {
+    "department": "CHNSHIS",
+    "num_courses": 7,
+    "avg_rating": 4.71,
+    "avg_hours": 8.64,
+    "avg_enrollment": 15.0,
+    "total_enrollment": 106
+  },
+  {
+    "department": "RUSS",
+    "num_courses": 14,
+    "avg_rating": 4.71,
+    "avg_hours": 8.83,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 106
+  },
+  {
+    "department": "YORUBA",
+    "num_courses": 3,
+    "avg_rating": 4.71,
+    "avg_hours": 4.26,
+    "avg_enrollment": 19.0,
+    "total_enrollment": 57
+  },
+  {
+    "department": "CHNSLIT",
+    "num_courses": 13,
+    "avg_rating": 4.69,
+    "avg_hours": 7.97,
+    "avg_enrollment": 13.0,
+    "total_enrollment": 169
+  },
+  {
+    "department": "WOMGEN",
+    "num_courses": 26,
+    "avg_rating": 4.69,
+    "avg_hours": 5.07,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 359
+  },
+  {
+    "department": "SOC-STD",
+    "num_courses": 43,
+    "avg_rating": 4.68,
+    "avg_hours": 6.22,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 592
+  },
+  {
+    "department": "ARABIC",
+    "num_courses": 14,
+    "avg_rating": 4.68,
+    "avg_hours": 8.47,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 109
+  },
+  {
+    "department": "CELTIC",
+    "num_courses": 8,
+    "avg_rating": 4.68,
+    "avg_hours": 2.94,
+    "avg_enrollment": 22.0,
+    "total_enrollment": 180
+  },
+  {
+    "department": "CLASARCH",
+    "num_courses": 4,
+    "avg_rating": 4.67,
+    "avg_hours": 3.52,
+    "avg_enrollment": 30.0,
+    "total_enrollment": 118
+  },
+  {
+    "department": "GREEK",
+    "num_courses": 13,
+    "avg_rating": 4.66,
+    "avg_hours": 6.58,
+    "avg_enrollment": 9.0,
+    "total_enrollment": 113
+  },
+  {
+    "department": "HUMAN",
+    "num_courses": 4,
+    "avg_rating": 4.66,
+    "avg_hours": 7.4,
+    "avg_enrollment": 54.0,
+    "total_enrollment": 217
+  },
+  {
+    "department": "SLAVIC",
+    "num_courses": 24,
+    "avg_rating": 4.66,
+    "avg_hours": 5.52,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 328
+  },
+  {
+    "department": "ENGLISH",
+    "num_courses": 159,
+    "avg_rating": 4.65,
+    "avg_hours": 5.63,
+    "avg_enrollment": 18.0,
+    "total_enrollment": 2930
+  },
+  {
+    "department": "EXPOS",
+    "num_courses": 4,
+    "avg_rating": 4.65,
+    "avg_hours": 4.98,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 43
+  },
+  {
+    "department": "EASTD",
+    "num_courses": 14,
+    "avg_rating": 4.63,
+    "avg_hours": 5.27,
+    "avg_enrollment": 17.0,
+    "total_enrollment": 234
+  },
+  {
+    "department": "HISTSCI",
+    "num_courses": 66,
+    "avg_rating": 4.62,
+    "avg_hours": 6.16,
+    "avg_enrollment": 22.0,
+    "total_enrollment": 1424
+  },
+  {
+    "department": "GERMAN",
+    "num_courses": 31,
+    "avg_rating": 4.62,
+    "avg_hours": 6.32,
+    "avg_enrollment": 15.0,
+    "total_enrollment": 459
+  },
+  {
+    "department": "EMR",
+    "num_courses": 31,
+    "avg_rating": 4.62,
+    "avg_hours": 4.52,
+    "avg_enrollment": 15.0,
+    "total_enrollment": 465
+  },
+  {
+    "department": "NEURO",
+    "num_courses": 33,
+    "avg_rating": 4.61,
+    "avg_hours": 4.94,
+    "avg_enrollment": 30.0,
+    "total_enrollment": 1006
+  },
+  {
+    "department": "KOREAN",
+    "num_courses": 9,
+    "avg_rating": 4.6,
+    "avg_hours": 7.19,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 103
+  },
+  {
+    "department": "MBB",
+    "num_courses": 14,
+    "avg_rating": 4.58,
+    "avg_hours": 3.92,
+    "avg_enrollment": 13.0,
+    "total_enrollment": 178
+  },
+  {
+    "department": "LATIN",
+    "num_courses": 19,
+    "avg_rating": 4.58,
+    "avg_hours": 6.3,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 207
+  },
+  {
+    "department": "GENETIC",
+    "num_courses": 3,
+    "avg_rating": 4.58,
+    "avg_hours": 6.61,
+    "avg_enrollment": 51.0,
+    "total_enrollment": 152
+  },
+  {
+    "department": "ROM-STD",
+    "num_courses": 11,
+    "avg_rating": 4.58,
+    "avg_hours": 5.14,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 155
+  },
+  {
+    "department": "AMHARIC",
+    "num_courses": 3,
+    "avg_rating": 4.58,
+    "avg_hours": 2.39,
+    "avg_enrollment": 9.0,
+    "total_enrollment": 28
+  },
+  {
+    "department": "AFRAMER",
+    "num_courses": 46,
+    "avg_rating": 4.57,
+    "avg_hours": 5.67,
+    "avg_enrollment": 16.0,
+    "total_enrollment": 724
+  },
+  {
+    "department": "HEB",
+    "num_courses": 33,
+    "avg_rating": 4.57,
+    "avg_hours": 4.21,
+    "avg_enrollment": 17.0,
+    "total_enrollment": 565
+  },
+  {
+    "department": "ANE",
+    "num_courses": 12,
+    "avg_rating": 4.57,
+    "avg_hours": 5.29,
+    "avg_enrollment": 10.0,
+    "total_enrollment": 114
+  },
+  {
+    "department": "HAA",
+    "num_courses": 78,
+    "avg_rating": 4.55,
+    "avg_hours": 6.13,
+    "avg_enrollment": 16.0,
+    "total_enrollment": 1234
+  },
+  {
+    "department": "HIST-LIT",
+    "num_courses": 54,
+    "avg_rating": 4.55,
+    "avg_hours": 4.97,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 652
+  },
+  {
+    "department": "MODMDEST",
+    "num_courses": 18,
+    "avg_rating": 4.54,
+    "avg_hours": 5.37,
+    "avg_enrollment": 15.0,
+    "total_enrollment": 264
+  },
+  {
+    "department": "SCRB",
+    "num_courses": 18,
+    "avg_rating": 4.54,
+    "avg_hours": 5.19,
+    "avg_enrollment": 45.0,
+    "total_enrollment": 816
+  },
+  {
+    "department": "EDST",
+    "num_courses": 16,
+    "avg_rating": 4.54,
+    "avg_hours": 4.31,
+    "avg_enrollment": 16.0,
+    "total_enrollment": 260
+  },
+  {
+    "department": "PSY",
+    "num_courses": 110,
+    "avg_rating": 4.53,
+    "avg_hours": 4.54,
+    "avg_enrollment": 26.0,
+    "total_enrollment": 2821
+  },
+  {
+    "department": "ANTHRO",
+    "num_courses": 75,
+    "avg_rating": 4.53,
+    "avg_hours": 6.55,
+    "avg_enrollment": 15.0,
+    "total_enrollment": 1095
+  },
+  {
+    "department": "AFVS",
+    "num_courses": 90,
+    "avg_rating": 4.52,
+    "avg_hours": 6.94,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 1085
+  },
+  {
+    "department": "E-PSCI",
+    "num_courses": 41,
+    "avg_rating": 4.52,
+    "avg_hours": 5.42,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 592
+  },
+  {
+    "department": "SPANSH",
+    "num_courses": 40,
+    "avg_rating": 4.52,
+    "avg_hours": 5.16,
+    "avg_enrollment": 13.0,
+    "total_enrollment": 524
+  },
+  {
+    "department": "FOLKMYTH",
+    "num_courses": 10,
+    "avg_rating": 4.52,
+    "avg_hours": 5.15,
+    "avg_enrollment": 18.0,
+    "total_enrollment": 182
+  },
+  {
+    "department": "SWAHILI",
+    "num_courses": 5,
+    "avg_rating": 4.52,
+    "avg_hours": 5.64,
+    "avg_enrollment": 9.0,
+    "total_enrollment": 44
+  },
+  {
+    "department": "RELIGION",
+    "num_courses": 34,
+    "avg_rating": 4.51,
+    "avg_hours": 5.09,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 414
+  },
+  {
+    "department": "HIST",
+    "num_courses": 175,
+    "avg_rating": 4.51,
+    "avg_hours": 6.68,
+    "avg_enrollment": 18.0,
+    "total_enrollment": 3140
+  },
+  {
+    "department": "COMPLIT",
+    "num_courses": 50,
+    "avg_rating": 4.51,
+    "avg_hours": 5.35,
+    "avg_enrollment": 19.0,
+    "total_enrollment": 963
+  },
+  {
+    "department": "TDM",
+    "num_courses": 58,
+    "avg_rating": 4.51,
+    "avg_hours": 4.38,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 806
+  },
+  {
+    "department": "FRENCH",
+    "num_courses": 28,
+    "avg_rating": 4.5,
+    "avg_hours": 6.09,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 296
+  },
+  {
+    "department": "MEDVLSTD",
+    "num_courses": 6,
+    "avg_rating": 4.49,
+    "avg_hours": 5.64,
+    "avg_enrollment": 10.0,
+    "total_enrollment": 59
+  },
+  {
+    "department": "MUSIC",
+    "num_courses": 58,
+    "avg_rating": 4.48,
+    "avg_hours": 4.99,
+    "avg_enrollment": 15.0,
+    "total_enrollment": 893
+  },
+  {
+    "department": "CLS-STDY",
+    "num_courses": 16,
+    "avg_rating": 4.48,
+    "avg_hours": 4.61,
+    "avg_enrollment": 22.0,
+    "total_enrollment": 353
+  },
+  {
+    "department": "FYSEMR",
+    "num_courses": 137,
+    "avg_rating": 4.46,
+    "avg_hours": 3.45,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 1495
+  },
+  {
+    "department": "ASTRON",
+    "num_courses": 23,
+    "avg_rating": 4.45,
+    "avg_hours": 7.47,
+    "avg_enrollment": 15.0,
+    "total_enrollment": 350
+  },
+  {
+    "department": "JEWISHST",
+    "num_courses": 5,
+    "avg_rating": 4.45,
+    "avg_hours": 4.85,
+    "avg_enrollment": 7.0,
+    "total_enrollment": 36
+  },
+  {
+    "department": "ESE",
+    "num_courses": 16,
+    "avg_rating": 4.44,
+    "avg_hours": 6.52,
+    "avg_enrollment": 19.0,
+    "total_enrollment": 297
+  },
+  {
+    "department": "PHIL",
+    "num_courses": 76,
+    "avg_rating": 4.43,
+    "avg_hours": 5.68,
+    "avg_enrollment": 23.0,
+    "total_enrollment": 1785
+  },
+  {
+    "department": "GOV",
+    "num_courses": 187,
+    "avg_rating": 4.43,
+    "avg_hours": 5.99,
+    "avg_enrollment": 29.0,
+    "total_enrollment": 5353
+  },
+  {
+    "department": "SOCIOL",
+    "num_courses": 81,
+    "avg_rating": 4.41,
+    "avg_hours": 5.37,
+    "avg_enrollment": 20.0,
+    "total_enrollment": 1590
+  },
+  {
+    "department": "FRSEMR",
+    "num_courses": 49,
+    "avg_rating": 4.39,
+    "avg_hours": 2.86,
+    "avg_enrollment": 10.0,
+    "total_enrollment": 490
+  },
+  {
+    "department": "MOD-HEB",
+    "num_courses": 6,
+    "avg_rating": 4.39,
+    "avg_hours": 7.46,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 45
+  },
+  {
+    "department": "OEB",
+    "num_courses": 41,
+    "avg_rating": 4.39,
+    "avg_hours": 4.47,
+    "avg_enrollment": 24.0,
+    "total_enrollment": 974
+  },
+  {
+    "department": "MICROBI",
+    "num_courses": 4,
+    "avg_rating": 4.37,
+    "avg_hours": 5.67,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 58
+  },
+  {
+    "department": "PHYSICS",
+    "num_courses": 62,
+    "avg_rating": 4.34,
+    "avg_hours": 9.08,
+    "avg_enrollment": 23.0,
+    "total_enrollment": 1437
+  },
+  {
+    "department": "ECON",
+    "num_courses": 114,
+    "avg_rating": 4.33,
+    "avg_hours": 6.56,
+    "avg_enrollment": 52.0,
+    "total_enrollment": 5941
+  },
+  {
+    "department": "HBTM",
+    "num_courses": 3,
+    "avg_rating": 4.33,
+    "avg_hours": 5.15,
+    "avg_enrollment": 22.0,
+    "total_enrollment": 65
+  },
+  {
+    "department": "CHEM",
+    "num_courses": 30,
+    "avg_rating": 4.3,
+    "avg_hours": 6.66,
+    "avg_enrollment": 44.0,
+    "total_enrollment": 1323
+  },
+  {
+    "department": "MATH",
+    "num_courses": 81,
+    "avg_rating": 4.3,
+    "avg_hours": 9.05,
+    "avg_enrollment": 28.0,
+    "total_enrollment": 2258
+  },
+  {
+    "department": "BE",
+    "num_courses": 8,
+    "avg_rating": 4.28,
+    "avg_hours": 8.58,
+    "avg_enrollment": 24.0,
+    "total_enrollment": 194
+  },
+  {
+    "department": "LING",
+    "num_courses": 31,
+    "avg_rating": 4.27,
+    "avg_hours": 5.36,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 384
+  },
+  {
+    "department": "APPHY",
+    "num_courses": 20,
+    "avg_rating": 4.26,
+    "avg_hours": 8.4,
+    "avg_enrollment": 29.0,
+    "total_enrollment": 583
+  },
+  {
+    "department": "STAT",
+    "num_courses": 52,
+    "avg_rating": 4.25,
+    "avg_hours": 8.01,
+    "avg_enrollment": 62.0,
+    "total_enrollment": 3243
+  },
+  {
+    "department": "ENG-SCI",
+    "num_courses": 87,
+    "avg_rating": 4.22,
+    "avg_hours": 7.96,
+    "avg_enrollment": 31.0,
+    "total_enrollment": 2662
+  },
+  {
+    "department": "NEC",
+    "num_courses": 3,
+    "avg_rating": 4.21,
+    "avg_hours": 5.16,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 36
+  },
+  {
+    "department": "AAAS",
+    "num_courses": 4,
+    "avg_rating": 4.2,
+    "avg_hours": 7.83,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 57
+  },
+  {
+    "department": "CELLBIO",
+    "num_courses": 5,
+    "avg_rating": 4.19,
+    "avg_hours": 3.92,
+    "avg_enrollment": 23.0,
+    "total_enrollment": 115
+  },
+  {
+    "department": "BPH",
+    "num_courses": 6,
+    "avg_rating": 4.19,
+    "avg_hours": 3.65,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 67
+  },
+  {
+    "department": "MCB",
+    "num_courses": 52,
+    "avg_rating": 4.18,
+    "avg_hours": 6.23,
+    "avg_enrollment": 34.0,
+    "total_enrollment": 1782
+  },
+  {
+    "department": "IMMUN",
+    "num_courses": 9,
+    "avg_rating": 4.18,
+    "avg_hours": 5.05,
+    "avg_enrollment": 19.0,
+    "total_enrollment": 170
+  },
+  {
+    "department": "PERSIAN",
+    "num_courses": 7,
+    "avg_rating": 4.17,
+    "avg_hours": 6.8,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 55
+  },
+  {
+    "department": "COMPSCI",
+    "num_courses": 75,
+    "avg_rating": 4.14,
+    "avg_hours": 8.53,
+    "avg_enrollment": 62.0,
+    "total_enrollment": 4687
+  },
+  {
+    "department": "NEUROBIO",
+    "num_courses": 7,
+    "avg_rating": 4.13,
+    "avg_hours": 5.68,
+    "avg_enrollment": 38.0,
+    "total_enrollment": 266
+  },
+  {
+    "department": "LIFESCI",
+    "num_courses": 6,
+    "avg_rating": 4.13,
+    "avg_hours": 10.09,
+    "avg_enrollment": 150.0,
+    "total_enrollment": 903
+  },
+  {
+    "department": "APMTH",
+    "num_courses": 26,
+    "avg_rating": 4.11,
+    "avg_hours": 8.63,
+    "avg_enrollment": 47.0,
+    "total_enrollment": 1217
+  },
+  {
+    "department": "IGBO",
+    "num_courses": 3,
+    "avg_rating": 4.11,
+    "avg_hours": 5.25,
+    "avg_enrollment": 8.0,
+    "total_enrollment": 25
+  },
+  {
+    "department": "QSE",
+    "num_courses": 9,
+    "avg_rating": 4.11,
+    "avg_hours": 8.62,
+    "avg_enrollment": 21.0,
+    "total_enrollment": 190
+  },
+  {
+    "department": "HLTHPOL",
+    "num_courses": 4,
+    "avg_rating": 4.09,
+    "avg_hours": 2.93,
+    "avg_enrollment": 14.0,
+    "total_enrollment": 56
+  },
+  {
+    "department": "GENED",
+    "num_courses": 126,
+    "avg_rating": 4.08,
+    "avg_hours": 4.48,
+    "avg_enrollment": 101.0,
+    "total_enrollment": 12693
+  },
+  {
+    "department": "ESPP",
+    "num_courses": 15,
+    "avg_rating": 4.07,
+    "avg_hours": 5.5,
+    "avg_enrollment": 19.0,
+    "total_enrollment": 291
+  },
+  {
+    "department": "BIOSTAT",
+    "num_courses": 15,
+    "avg_rating": 4.06,
+    "avg_hours": 8.71,
+    "avg_enrollment": 12.0,
+    "total_enrollment": 185
+  },
+  {
+    "department": "BCMP",
+    "num_courses": 7,
+    "avg_rating": 4.02,
+    "avg_hours": 4.0,
+    "avg_enrollment": 39.0,
+    "total_enrollment": 276
+  },
+  {
+    "department": "PHYSCI",
+    "num_courses": 6,
+    "avg_rating": 3.94,
+    "avg_hours": 8.72,
+    "avg_enrollment": 144.0,
+    "total_enrollment": 862
+  },
+  {
+    "department": "MED-SCI",
+    "num_courses": 3,
+    "avg_rating": 3.83,
+    "avg_hours": 1.14,
+    "avg_enrollment": 102.0,
+    "total_enrollment": 307
+  },
+  {
+    "department": "VIROLOGY",
+    "num_courses": 3,
+    "avg_rating": 3.71,
+    "avg_hours": 5.32,
+    "avg_enrollment": 11.0,
+    "total_enrollment": 33
+  },
+  {
+    "department": "APCOMP",
+    "num_courses": 8,
+    "avg_rating": 3.66,
+    "avg_hours": 8.22,
+    "avg_enrollment": 149.0,
+    "total_enrollment": 1191
+  },
+  {
+    "department": "SHBT",
+    "num_courses": 3,
+    "avg_rating": 3.63,
+    "avg_hours": 7.0,
+    "avg_enrollment": 7.0,
+    "total_enrollment": 21
+  },
+  {
+    "department": "BBS",
+    "num_courses": 5,
+    "avg_rating": 3.12,
+    "avg_hours": 4.59,
+    "avg_enrollment": 49.0,
+    "total_enrollment": 245
+  }
+]

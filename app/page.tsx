@@ -33,10 +33,10 @@ export default function Home() {
           />
           <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center text-center">
             {/* Subtle dark backdrop for text area */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40" />
+            <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/40" />
             
             <div className="relative z-10 flex flex-col items-center">
-              <h1 className="text-5xl font-normal md:text-6xl max-w-3xl px-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center">THE HARVARD CONCENTRATION COMPASS</h1>
+              <h1 className="text-5xl font-normal md:text-6xl max-w-3xl px-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-center">The Harvard Concentration Compass</h1>
               <p className="mt-6 text-lg font-normal text-white max-w-2xl px-6 leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)] text-center">
                 Exploring the data behind every concentration - from workload to well-being.
               </p>
@@ -58,7 +58,7 @@ export default function Home() {
           href="/story"
           className="text-white text-lg font-normal underline underline-offset-4 hover:text-gray-300 transition-colors duration-200"
         >
-          Begin your data journey        </Link>
+          Begin your data journey </Link>
       </div>
     </main>
   );
