@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronDown } from 'lucide-react';
 import { useMemo, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { useDataContext } from '../dataContext';
@@ -25,7 +25,7 @@ type TooltipInfo = {
   y: number;
 };
 
-export default function PageFour({ onNext }: { onNext: () => void }) {
+export default function PageFour({ onPrev, onNext }: { onPrev: () => void; onNext: () => void }) {
   const { departments, selectedDept } = useDataContext();
   const [filter, setFilter] = useState<Filter>('All');
   const [tooltip, setTooltip] = useState<TooltipInfo | null>(null);
@@ -73,6 +73,10 @@ export default function PageFour({ onNext }: { onNext: () => void }) {
       <div className="flex flex-col items-center gap-4">
         <PageBadge page={3} label="Context" />
         <div className="flex items-center gap-3 text-sm text-white/70">
+          <ArrowLeft className="h-4 w-4" />
+          <button onClick={onPrev} className="underline underline-offset-4 hover:text-white">
+            Back
+          </button>
           <span className="text-white/60">Filter</span>
           <DropdownMenu>
             <DropdownMenuTrigger className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50">
