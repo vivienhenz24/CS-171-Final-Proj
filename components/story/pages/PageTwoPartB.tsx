@@ -23,11 +23,12 @@ export default function PageTwoPartB({ onPrev, onNext }: { onPrev: () => void; o
   const containerRef = useRef<HTMLDivElement>(null);
   const [tooltip, setTooltip] = useState<TooltipData>(null);
 
-  // Prepare chart data sorted by avg_hours descending
+  // Prepare chart data sorted by avg_hours descending (multiplied by 3.5)
   const chartData = useMemo(() => {
     return [...departments]
       .map(d => ({
         ...d,
+        avg_hours: d.avg_hours * 3.5,
         division: getDivision(d.department)
       }))
       .sort((a, b) => b.avg_hours - a.avg_hours);

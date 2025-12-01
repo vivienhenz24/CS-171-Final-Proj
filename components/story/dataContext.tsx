@@ -47,6 +47,55 @@ type DataState = {
 
 const DataContext = createContext<DataState | undefined>(undefined);
 
+// Only include these specific concentrations (Harvard majors)
+const ALLOWED_DEPARTMENTS = new Set([
+  'AFRAMER',   // African and African American Studies (use this, not AAAS)
+  'ANTHRO',    // Anthropology
+  'APMTH',     // Applied Mathematics
+  'AFVS',      // Art, Film, and Visual Studies
+  'ASTRON',    // Astrophysics/Astronomy
+  'BE',        // Biomedical Engineering
+  'CPB',       // Chemical and Physical Biology
+  'CHEM',      // Chemistry
+  'CLS-STDY',  // Classics
+  'COMPLIT',   // Comparative Literature
+  'RELIGION',  // Comparative Study of Religion
+  'COMPSCI',   // Computer Science
+  'E-PSCI',    // Earth and Planetary Sciences
+  'EASTD',     // East Asian Studies
+  'ECON',      // Economics
+  'ENG-SCI',   // Engineering Sciences / Electrical Engineering / Mechanical Engineering
+  'ENGLISH',   // English
+  'ESE',       // Environmental Science and Engineering
+  'ESPP',      // Environmental Science and Public Policy
+  'FOLKMYTH',  // Folklore and Mythology
+  'GERMAN',    // Germanic Languages and Literatures
+  'GOV',       // Government
+  'HIST',      // History
+  'HIST-LIT',  // History and Literature
+  'HISTSCI',   // History and Science
+  'HAA',       // History of Art and Architecture
+  'SCRB',      // Human Developmental and Regenerative Biology (HDRB)
+  'HBTM',      // Human Evolutionary Biology
+  'OEB',       // Integrative Biology (Organismic and Evolutionary Biology)
+  'LING',      // Linguistics
+  'MATH',      // Mathematics
+  'MCB',       // Molecular and Cellular Biology (use this, not MBB)
+  'MUSIC',     // Music
+  'NEC',       // Near Eastern Languages and Civilizations
+  'NEURO',     // Neuroscience
+  'PHIL',      // Philosophy
+  'PHYSICS',   // Physics
+  'PSY',       // Psychology
+  'ROM-STD',   // Romance Languages and Literatures
+  'SLAVIC',    // Slavic Languages and Literatures
+  'SOC-STD',   // Social Studies
+  'SOCIOL',    // Sociology
+  'STAT',      // Statistics
+  'TDM',       // Theater, Dance & Media
+  'WOMGEN',    // Studies of Women, Gender, and Sexuality
+]);
+
 const parseDepartments = (text: string): DepartmentStats[] => {
   return csvParse(text, (row) => {
     const code = row.department || '';
@@ -59,7 +108,7 @@ const parseDepartments = (text: string): DepartmentStats[] => {
       avg_enrollment: Number(row.avg_enrollment || 0),
       total_enrollment: Number(row.total_enrollment || 0)
     };
-  }).filter((d) => d.department && d.avg_hours > 0);
+  }).filter((d) => d.department && d.avg_hours > 0 && ALLOWED_DEPARTMENTS.has(d.department));
 };
 
 const parseCourses = (text: string): CourseSummary[] => {
@@ -72,7 +121,7 @@ const parseCourses = (text: string): CourseSummary[] => {
     hours_per_week: Number(row.hours_per_week || 0),
     num_students: Number(row.num_students || 0),
     semester: row.semester || ''
-  })).filter((c) => c.department && c.rating > 0 && c.hours_per_week > 0);
+  })).filter((c) => c.department && c.rating > 0 && c.hours_per_week > 0 && ALLOWED_DEPARTMENTS.has(c.department));
 };
 
 const parseTimeseries = (text: string): TimeSeriesEntry[] => {
@@ -84,7 +133,7 @@ const parseTimeseries = (text: string): TimeSeriesEntry[] => {
     hours_per_week: Number(row.hours_per_week || 0),
     rating: Number(row.rating || 0),
     num_students: Number(row.num_students || 0),
-  })).filter((e) => e.department && e.hours_per_week > 0 && e.year > 0);
+  })).filter((e) => e.department && e.hours_per_week > 0 && e.year > 0 && ALLOWED_DEPARTMENTS.has(e.department));
 };
 
 export function DataProvider({ children }: { children: React.ReactNode }) {

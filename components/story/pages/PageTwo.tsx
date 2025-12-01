@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useDataContext } from '../dataContext';
 import { PageBadge } from './common';
 import { useMemo, useRef, useEffect, useState } from 'react';
@@ -24,7 +24,7 @@ export default function PageTwo({ onPrev, onNext }: { onPrev: () => void; onNext
     const grouped = d3.group(deptData, d => d.semester);
     
     const aggregated = Array.from(grouped, ([semester, entries]) => {
-      const avgHours = d3.mean(entries, d => d.hours_per_week) || 0;
+      const avgHours = (d3.mean(entries, d => d.hours_per_week) || 0) * 3.5;
       const year = entries[0]?.year || 0;
       const term = entries[0]?.term || '';
       
@@ -300,10 +300,19 @@ export default function PageTwo({ onPrev, onNext }: { onPrev: () => void; onNext
         <div className="text-sm text-white/70 max-w-3xl text-center">
           <p>
             Students in <span className="font-normal text-white">{selectedDept.departmentName}</span> report an average of{' '}
-            <span className="text-white">{selectedDept.avg_hours.toFixed(1)} hours/week</span> across all courses.
+            <span className="text-white">{(selectedDept.avg_hours * 3.5).toFixed(1)} hours/week</span> across all courses.
           </p>
         </div>
       )}
+
+      <div className="flex flex-col gap-4 text-sm text-white/75 max-w-3xl text-center">
+        <button
+          onClick={onNext}
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-normal hover:bg-white/20 mx-auto"
+        >
+          See how you compare to everyone else <ArrowRight className="h-4 w-4" />
+        </button>
+      </div>
     </section>
   );
 }
