@@ -55,7 +55,6 @@ const ALLOWED_DEPARTMENTS = new Set([
   'AFVS',      // Art, Film, and Visual Studies
   'ASTRON',    // Astrophysics/Astronomy
   'BE',        // Biomedical Engineering
-  'CPB',       // Chemical and Physical Biology
   'CHEM',      // Chemistry
   'CLS-STDY',  // Classics
   'COMPLIT',   // Comparative Literature
