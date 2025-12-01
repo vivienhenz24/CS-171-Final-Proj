@@ -8,15 +8,16 @@ import PageTwo from './pages/PageTwo';
 import PageTwoPartB from './pages/PageTwoPartB';
 import PageFour from './pages/PageFour';
 import PageFive from './pages/PageFive';
+import PageSixAggregate from './pages/PageSixAggregate';
 import PageSeven from './pages/PageSeven';
 import PageSix from './pages/PageSix';
 
 export default function StoryJourney() {
-  const [page, setPage] = useState<1 | 2 | '2b' | 3 | 4 | 5 | 6>(1);
+  const [page, setPage] = useState<1 | 2 | '2b' | 3 | 4 | 5 | 6 | 7>(1);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [nextPage, setNextPage] = useState<1 | 2 | '2b' | 3 | 4 | 5 | 6 | null>(null);
+  const [nextPage, setNextPage] = useState<1 | 2 | '2b' | 3 | 4 | 5 | 6 | 7 | null>(null);
 
-  const handlePageChange = (newPage: 1 | 2 | '2b' | 3 | 4 | 5 | 6) => {
+  const handlePageChange = (newPage: 1 | 2 | '2b' | 3 | 4 | 5 | 6 | 7) => {
     setNextPage(newPage);
     setIsTransitioning(true);
   };
@@ -37,8 +38,9 @@ export default function StoryJourney() {
         {page === '2b' && <PageTwoPartB onPrev={() => handlePageChange(2)} onNext={() => handlePageChange(3)} />}
         {page === 3 && <PageFour onPrev={() => handlePageChange('2b')} onNext={() => handlePageChange(4)} />}
         {page === 4 && <PageFive onPrev={() => handlePageChange(3)} onNext={() => handlePageChange(5)} />}
-        {page === 5 && <PageSeven onPrev={() => handlePageChange(4)} onNext={() => handlePageChange(6)} />}
-        {page === 6 && <PageSix onReset={() => handlePageChange(1)} />}
+        {page === 5 && <PageSixAggregate onPrev={() => handlePageChange(4)} onNext={() => handlePageChange(6)} />}
+        {page === 6 && <PageSeven onPrev={() => handlePageChange(5)} onNext={() => handlePageChange(7)} />}
+        {page === 7 && <PageSix onReset={() => handlePageChange(1)} />}
       </div>
       <PageTransition isTransitioning={isTransitioning} onTransitionComplete={handleTransitionComplete} />
     </DataProvider>
