@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowLeft, ArrowRight, ChevronDown } from 'lucide-react';
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState, useEffect } from 'react';
 import * as d3 from 'd3';
 import { useDataContext } from '../dataContext';
 import { PageBadge } from './common';
@@ -53,7 +53,7 @@ export default function PageFour({ onPrev, onNext }: { onPrev: () => void; onNex
 
   const width = 900;
   const height = 520;
-  const margin = { top: 60, right: 30, bottom: 60, left: 70 };
+  const margin = useMemo(() => ({ top: 60, right: 30, bottom: 60, left: 70 }), []);
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
 
@@ -65,6 +65,41 @@ export default function PageFour({ onPrev, onNext }: { onPrev: () => void; onNex
     () => d3.scaleLinear().domain([3.8, 4.8]).range([innerHeight, 0]).nice(),
     [innerHeight]
   );
+
+  const axesSvgRef = useRef<SVGSVGElement>(null);
+
+  useEffect(() => {
+    if (!axesSvgRef.current || !baseData.length) return;
+
+    const svg = d3.select(axesSvgRef.current);
+    svg.selectAll('*').remove();
+
+    const g = svg
+      .append('g')
+      .attr('transform', `translate(${margin.left},${margin.top})`);
+
+    // X axis
+    const xAxis = d3.axisBottom(xScale).ticks(5);
+    g.append('g')
+      .attr('transform', `translate(0,${innerHeight})`)
+      .call(xAxis)
+      .selectAll('text')
+      .attr('fill', 'white')
+      .attr('font-size', '11px');
+
+    // Y axis
+    const yAxis = d3.axisLeft(yScale).ticks(5);
+    g.append('g')
+      .call(yAxis)
+      .selectAll('text')
+      .attr('fill', 'white')
+      .attr('font-size', '11px');
+
+    // Hide axis lines but keep values
+    g.selectAll('.domain').attr('stroke', 'none');
+    g.selectAll('.tick line').attr('stroke', 'none');
+
+  }, [xScale, yScale, baseData.length, margin, innerWidth, innerHeight]);
 
   if (!selectedDept) return null;
 
@@ -111,8 +146,11 @@ export default function PageFour({ onPrev, onNext }: { onPrev: () => void; onNex
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(220,20,60,0.08),transparent_35%),radial-gradient(circle_at_80%_30%,rgba(59,130,246,0.08),transparent_32%),radial-gradient(circle_at_50%_80%,rgba(34,197,94,0.1),transparent_30%)]" />
 
+        {/* SVG for axes */}
+        <svg ref={axesSvgRef} width={width} height={height} className="absolute inset-0 pointer-events-none" />
+
         {/* Quadrants */}
-        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 border border-white/20" style={{ padding: '60px 70px 60px 70px' }}>
+        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2" style={{ padding: '60px 70px 60px 70px' }}>
           <div className="border-b border-r border-white/20 px-2 py-1 text-xs text-white/60">The Gems</div>
           <div className="border-b border-white/20 px-2 py-1 text-right text-xs text-white/60">The Passion Projects</div>
           <div className="border-r border-white/20 px-2 py-1 text-xs text-white/60">The Breezy Majors</div>
