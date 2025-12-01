@@ -25,9 +25,20 @@ export type CourseSummary = {
   semester: string;
 };
 
+export type TimeSeriesEntry = {
+  department: string;
+  semester: string;
+  year: number;
+  term: string;
+  hours_per_week: number;
+  rating: number;
+  num_students: number;
+};
+
 type DataState = {
   departments: DepartmentStats[];
   courses: CourseSummary[];
+  timeseries: TimeSeriesEntry[];
   selectedDept: DepartmentStats | null;
   setSelectedDept: (dept: DepartmentStats) => void;
   loading: boolean;
@@ -64,9 +75,22 @@ const parseCourses = (text: string): CourseSummary[] => {
   })).filter((c) => c.department && c.rating > 0 && c.hours_per_week > 0);
 };
 
+const parseTimeseries = (text: string): TimeSeriesEntry[] => {
+  return csvParse(text, (row) => ({
+    department: row.department || '',
+    semester: row.semester || '',
+    year: Number(row.year || 0),
+    term: row.term || '',
+    hours_per_week: Number(row.hours_per_week || 0),
+    rating: Number(row.rating || 0),
+    num_students: Number(row.num_students || 0),
+  })).filter((e) => e.department && e.hours_per_week > 0 && e.year > 0);
+};
+
 export function DataProvider({ children }: { children: React.ReactNode }) {
   const [departments, setDepartments] = useState<DepartmentStats[]>([]);
   const [courses, setCourses] = useState<CourseSummary[]>([]);
+  const [timeseries, setTimeseries] = useState<TimeSeriesEntry[]>([]);
   const [selectedDept, setSelectedDept] = useState<DepartmentStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -74,16 +98,22 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const load = async () => {
       try {
-        const [deptRes, courseRes] = await Promise.all([
-          fetch('/api/data?file=departments_summary.csv'),
-          fetch('/api/data?file=courses_summary.csv')
+        const [deptRes, courseRes, timeseriesRes] = await Promise.all([
+          fetch('/data/qguide_departments.csv'),
+          fetch('/data/qguide_latest_semester.csv'),
+          fetch('/data/qguide_timeseries.csv')
         ]);
-        if (!deptRes.ok || !courseRes.ok) {
+        if (!deptRes.ok || !courseRes.ok || !timeseriesRes.ok) {
           throw new Error('Unable to load CSV data');
         }
-        const [deptText, courseText] = await Promise.all([deptRes.text(), courseRes.text()]);
+        const [deptText, courseText, timeseriesText] = await Promise.all([
+          deptRes.text(), 
+          courseRes.text(),
+          timeseriesRes.text()
+        ]);
         const deptData = parseDepartments(deptText);
         const courseData = parseCourses(courseText);
+        const timeseriesData = parseTimeseries(timeseriesText);
         
         // Sort departments alphabetically by departmentName
         const sortedDepts = [...deptData].sort((a, b) => 
@@ -95,10 +125,11 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         
         setDepartments(sortedDepts);
         setCourses(courseData);
+        setTimeseries(timeseriesData);
         setSelectedDept(compSciDept ?? sortedDepts[0] ?? null);
       } catch (err) {
         console.error(err);
-        setError('Could not load data from CSV. Check /data/csv files.');
+        setError('Could not load data from CSV. Check /data files.');
       } finally {
         setLoading(false);
       }
@@ -110,12 +141,13 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     () => ({
       departments,
       courses,
+      timeseries,
       selectedDept,
       setSelectedDept,
       loading,
       error
     }),
-    [departments, courses, selectedDept, loading, error]
+    [departments, courses, timeseries, selectedDept, loading, error]
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
