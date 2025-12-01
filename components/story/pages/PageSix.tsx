@@ -18,7 +18,7 @@ export default function PageSix({ onReset }: { onReset: () => void }) {
 
   return (
     <section className="relative z-10 flex min-h-screen flex-col gap-8 px-6 py-16 md:px-12">
-      <PageBadge page={6} label="Reflect & compare" />
+      <PageBadge page={5} label="Reflect & compare" />
       <div className="grid gap-8 md:grid-cols-[2fr_1fr] max-w-6xl">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">
           <h2 className="text-3xl font-semibold">Your Concentration Compass Summary</h2>

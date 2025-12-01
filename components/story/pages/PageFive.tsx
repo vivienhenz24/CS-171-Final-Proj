@@ -7,7 +7,7 @@ import { PageBadge } from './common';
 export default function PageFive({ onNext }: { onNext: () => void }) {
   return (
     <section className="relative z-10 flex min-h-screen flex-col gap-8 px-6 py-16 md:px-12 bg-gradient-to-b from-[#0d0d10] via-[#0f1117] to-[#0b0b10]">
-      <PageBadge page={5} label="Data gaps" />
+      <PageBadge page={4} label="Data gaps" />
       <div className="max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-semibold">The data we don’t have (yet)</h2>
         <p className="mt-3 text-white/70">
