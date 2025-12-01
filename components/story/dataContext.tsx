@@ -2,9 +2,11 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { csvParse } from 'd3';
+import { getDepartmentName } from '@/lib/departmentNames';
 
 export type DepartmentStats = {
   department: string;
+  departmentName: string; // Full name
   num_courses: number;
   avg_rating: number;
   avg_hours: number;
@@ -35,14 +37,18 @@ type DataState = {
 const DataContext = createContext<DataState | undefined>(undefined);
 
 const parseDepartments = (text: string): DepartmentStats[] => {
-  return csvParse(text, (row) => ({
-    department: row.department || '',
-    num_courses: Number(row.num_courses || 0),
-    avg_rating: Number(row.avg_rating || 0),
-    avg_hours: Number(row.avg_hours || 0),
-    avg_enrollment: Number(row.avg_enrollment || 0),
-    total_enrollment: Number(row.total_enrollment || 0)
-  })).filter((d) => d.department && d.avg_hours > 0);
+  return csvParse(text, (row) => {
+    const code = row.department || '';
+    return {
+      department: code,
+      departmentName: getDepartmentName(code),
+      num_courses: Number(row.num_courses || 0),
+      avg_rating: Number(row.avg_rating || 0),
+      avg_hours: Number(row.avg_hours || 0),
+      avg_enrollment: Number(row.avg_enrollment || 0),
+      total_enrollment: Number(row.total_enrollment || 0)
+    };
+  }).filter((d) => d.department && d.avg_hours > 0);
 };
 
 const parseCourses = (text: string): CourseSummary[] => {
@@ -78,9 +84,18 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         const [deptText, courseText] = await Promise.all([deptRes.text(), courseRes.text()]);
         const deptData = parseDepartments(deptText);
         const courseData = parseCourses(courseText);
-        setDepartments(deptData);
+        
+        // Sort departments alphabetically by departmentName
+        const sortedDepts = [...deptData].sort((a, b) => 
+          a.departmentName.localeCompare(b.departmentName)
+        );
+        
+        // Find Computer Science as default
+        const compSciDept = sortedDepts.find(d => d.department === 'COMPSCI');
+        
+        setDepartments(sortedDepts);
         setCourses(courseData);
-        setSelectedDept(deptData[0] ?? null);
+        setSelectedDept(compSciDept ?? sortedDepts[0] ?? null);
       } catch (err) {
         console.error(err);
         setError('Could not load data from CSV. Check /data/csv files.');
