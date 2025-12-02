@@ -11,7 +11,7 @@ export default function PageSeven({ onPrev, onNext }: { onPrev: () => void; onNe
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(220,20,60,0.18),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(37,99,235,0.12),transparent_28%),radial-gradient(circle_at_40%_70%,rgba(22,163,74,0.16),transparent_26%)] blur-3xl opacity-80" />
 
       <div className="relative flex flex-col items-center gap-4">
-        <PageBadge page={6} label="Data gaps" />
+        <PageBadge page={7} label="Data gaps" />
         <div className="flex items-center gap-3 text-sm text-white/70">
           <ArrowLeft className="h-4 w-4" />
           <button onClick={onPrev} className="underline underline-offset-4 hover:text-white">

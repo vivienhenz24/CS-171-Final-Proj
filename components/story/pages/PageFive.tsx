@@ -176,7 +176,7 @@ export default function PageFive({ onPrev, onNext }: { onPrev: () => void; onNex
   return (
     <section className="relative z-10 flex min-h-screen flex-col items-center gap-8 px-6 py-16 md:px-12">
       <div className="flex flex-col items-center gap-4">
-        <PageBadge page={4} label="Your future" />
+        <PageBadge page={5} label="Your future" />
         <div className="flex items-center gap-3 text-sm text-white/70">
           <ArrowLeft className="h-4 w-4" />
           <button onClick={onPrev} className="underline underline-offset-4 hover:text-white">

@@ -21,7 +21,7 @@ export default function PageSix({ onReset }: { onReset: () => void }) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(220,20,60,0.18),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(37,99,235,0.12),transparent_28%),radial-gradient(circle_at_40%_70%,rgba(22,163,74,0.16),transparent_26%)] blur-3xl opacity-80" />
 
       <div className="relative flex flex-col items-center gap-4">
-        <PageBadge page={7} label="Reflect & compare" />
+        <PageBadge page={8} label="Reflect & compare" />
       </div>
 
       <div className="relative max-w-5xl text-center">
