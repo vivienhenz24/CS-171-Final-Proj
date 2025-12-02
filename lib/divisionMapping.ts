@@ -132,3 +132,4 @@ export const divisionColors: Record<Division, string> = {
   'STEM': '#3B82F6',            // Blue
   'Social Sciences': '#22C55E', // Green
 };
+
