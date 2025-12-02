@@ -150,21 +150,21 @@ export default function PageThree({ onPrev, onNext }: { onPrev: () => void; onNe
       .attr('rx', 6)
       .attr('opacity', 0.9)
       .style('cursor', 'pointer')
-      .on('mouseenter', function() {
+      .on('mouseenter', function(event, d) {
         d3.select(this)
           .transition()
           .duration(200)
           .attr('opacity', 1)
-          .attr('y', d => yScale(d.value) - 2)
-          .attr('height', d => height - yScale(d.value) + 2);
+          .attr('y', yScale(d.value) - 2)
+          .attr('height', height - yScale(d.value) + 2);
       })
-      .on('mouseleave', function() {
+      .on('mouseleave', function(event, d) {
         d3.select(this)
           .transition()
           .duration(200)
           .attr('opacity', 0.9)
-          .attr('y', d => yScale(d.value))
-          .attr('height', d => height - yScale(d.value));
+          .attr('y', yScale(d.value))
+          .attr('height', height - yScale(d.value));
       });
 
     // Value labels on bars
